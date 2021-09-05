@@ -2,12 +2,20 @@
 
 body {
   background-color: #26B4BC;
-
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(../image/ellipse-2.png), url(../image/ellipse-1.png);
+  background-repeat: no-repeat;
+  background-size: 33%;
+  background-position: top left, right bottom;
 }
 
 .wrapper {
   max-inline-size: 900px;
   margin: auto;
+  padding-inline: 16px;
 }
 
 .player {
