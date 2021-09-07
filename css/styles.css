@@ -6,10 +6,12 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-image: url(../image/ellipse-2.png), url(../image/ellipse-1.png);
   background-repeat: no-repeat;
   background-size: 33%;
   background-position: top left, right bottom;
+
 }
 
 .wrapper {
@@ -20,12 +22,14 @@ body {
 
 .player {
   position: relative;
+
 }
 
 .player video{
   inline-size: 100%;
   aspect-ratio: 16/9;
   vertical-align: middle;
+  object-fit: cover;
 }
 
 .player-title {
@@ -38,6 +42,7 @@ body {
   font-weight: 400;
   position: absolute;
   inset-block-start: 0;
+  inset-inline-start: 0;
 }
 
 .player-actions {
@@ -56,8 +61,20 @@ body {
   inset-inline: 0;
   display: flex;
   padding: 10px;
+  z-index: 2;
 }
 
 .player-progress input {
   flex: 1;
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.player:hover .player-overlay{
+  opacity: 1;
 }
